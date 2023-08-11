@@ -20,3 +20,5 @@ def test_vazio():
     assert resposta == [5, 6, 7, 8, 9, 10]
     resposta = lst.merge_sort([7, 5, 9, 10, 6, 8])
     assert resposta == [5, 6, 7, 8, 9, 10]
+    resposta = lst.quick_sort([5, 2, 3, 4, 1], 0, 4)
+    assert resposta == [1, 2, 3, 4, 5]

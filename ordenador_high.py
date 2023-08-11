@@ -15,7 +15,11 @@ class Sorter:
         return valores, i
 
     def quick_sort(self, valores, inicio, fim) -> [int]:
-        return [1]
+        if inicio < fim:
+            valores, pivo = self.particiona(valores, inicio, fim)
+            self.quick_sort(valores, inicio, pivo)
+            self.quick_sort(valores, pivo + 1, fim)
+        return valores
 
     def merge(self, esquerda, direita) -> [int]:
         i = 0
