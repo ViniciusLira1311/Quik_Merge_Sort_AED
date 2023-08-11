@@ -42,4 +42,11 @@ class Sorter:
     
 
     def merge_sort(self, valores) -> [int]:
-        return [1]
+        if len(valores) <= 1:
+            return valores
+        else:   
+            meio = (int) (len(valores)/2)
+            esquerda = self.merge_sort(valores[:meio])
+            direita = self.merge_sort(valores[meio:])
+            return self.merge(esquerda, direita)
+        
